@@ -1,9 +1,11 @@
-# Grafana OSS 13.3.1 — local evidence dashboard (localhost, authenticated, read-only).
+# Grafana OSS (localhost, authenticated, read-only).
+# Pin note: Docker Hub's 13.x line tops out at 13.0.2 (the 13.3.1 release tag
+# from GitHub was never pushed to Docker Hub); 13.0.2 is the newest OSS image.
 # Human setup (spec §8): create dashboard/.env with GF_SECURITY_ADMIN_PASSWORD, then:
 #     docker compose up -d
 services:
   grafana:
-    image: grafana/grafana-oss:13.3.1
+    image: grafana/grafana-oss:13.0.2
     container_name: evidence-grafana
     restart: unless-stopped
     ports:

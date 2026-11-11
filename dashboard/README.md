@@ -1,8 +1,9 @@
 # Local evidence dashboard — Grafana OSS (read-only)
 
 Localhost, authenticated, read-only view over the data_agent evidence stores
-(spec §5). Data lives in the sibling private-ish working copy; this container
-only reads it. Nothing here is exposed beyond `127.0.0.1:3000`.
+(spec §5), running `grafana/grafana-oss:13.0.2` (the newest OSS image Docker
+Hub publishes). Data lives in the sibling private-ish working copy; this
+container only reads it. Nothing here is exposed beyond `127.0.0.1:3000`.
 
 ## Setup (one-time)
 
