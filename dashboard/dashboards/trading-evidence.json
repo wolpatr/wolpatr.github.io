@@ -1,0 +1,133 @@
+{
+  "uid": "trading-evidence",
+  "title": "Trading evidence",
+  "tags": ["evidence", "read-only"],
+  "timezone": "utc",
+  "schemaVersion": 39,
+  "version": 1,
+  "editable": true,
+  "refresh": "5m",
+  "time": {"from": "now-7d", "to": "now"},
+  "panels": [
+    {
+      "id": 30,
+      "type": "text",
+      "title": "Gate status",
+      "gridPos": {"h": 3, "w": 24, "x": 0, "y": 0},
+      "options": {
+        "mode": "markdown",
+        "content": "Read-only evidence view. The v0.1 gate arm runs under weekly gate discipline (first review 2026-11-16; verdict expected around the week of 2026-11-23). Incidents & interventions are recorded in `docs/interventions.md` (private working copy) and summarized, not tabulated, here. sqlite-vec layers are intentionally out of Grafana's reach."
+      }
+    },
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Arm v0.1 — closed trades",
+      "gridPos": {"h": 4, "w": 6, "x": 0, "y": 3},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "arm-v01"},
+      "targets": [
+        {"refId": "A", "queryType": "table", "rawQuery": true,
+         "queryText": "SELECT COUNT(*) AS closed_trades FROM trades WHERE is_open = 0"}
+      ]
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Arm v0.1 — win rate (closed)",
+      "gridPos": {"h": 4, "w": 6, "x": 6, "y": 3},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "arm-v01"},
+      "targets": [
+        {"refId": "A", "queryType": "table", "rawQuery": true,
+         "queryText": "SELECT ROUND(100.0 * SUM(CASE WHEN close_profit > 0 THEN 1 ELSE 0 END) / NULLIF(COUNT(*), 0), 1) AS win_rate_pct FROM trades WHERE is_open = 0"}
+      ]
+    },
+    {
+      "id": 3,
+      "type": "stat",
+      "title": "Arm v0.1 — weeks live",
+      "gridPos": {"h": 4, "w": 6, "x": 12, "y": 3},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "arm-v01"},
+      "targets": [
+        {"refId": "A", "queryType": "table", "rawQuery": true,
+         "queryText": "SELECT CAST((julianday('now') - julianday((SELECT MIN(open_date) FROM trades))) / 7 AS INTEGER) AS weeks_live"}
+      ]
+    },
+    {
+      "id": 4,
+      "type": "stat",
+      "title": "Arm v0.2 — open trades",
+      "gridPos": {"h": 4, "w": 6, "x": 18, "y": 3},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "arm-v02"},
+      "targets": [
+        {"refId": "A", "queryType": "table", "rawQuery": true,
+         "queryText": "SELECT COUNT(*) AS open_trades FROM trades WHERE is_open = 1"}
+      ]
+    },
+    {
+      "id": 10,
+      "type": "timeseries",
+      "title": "Equity — arm v0.1 (gate)",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 7},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "arm-v01"},
+      "targets": [
+        {"refId": "A", "queryType": "time series", "rawQuery": true,
+         "queryText": "SELECT strftime('%Y-%m-%dT00:00:00Z', timestamp) AS \"time\", ROUND(SUM(total_quote), 2) AS portfolio_usdt\nFROM wallet_history\nGROUP BY strftime('%Y-%m-%d', timestamp)\nORDER BY \"time\""}
+      ]
+    },
+    {
+      "id": 11,
+      "type": "timeseries",
+      "title": "Equity — arm v0.2 (comparison)",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 7},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "arm-v02"},
+      "targets": [
+        {"refId": "A", "queryType": "time series", "rawQuery": true,
+         "queryText": "SELECT strftime('%Y-%m-%dT00:00:00Z', timestamp) AS \"time\", ROUND(SUM(total_quote), 2) AS portfolio_usdt\nFROM wallet_history\nGROUP BY strftime('%Y-%m-%d', timestamp)\nORDER BY \"time\""}
+      ]
+    },
+    {
+      "id": 20,
+      "type": "timeseries",
+      "title": "Trials — folds & mean test_sharpe per day",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 15},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "evidence-ledger"},
+      "targets": [
+        {"refId": "A", "queryType": "time series", "rawQuery": true,
+         "queryText": "SELECT strftime('%Y-%m-%dT%H:%M:%SZ', created_utc) AS \"time\",\n       COUNT(*) AS folds,\n       ROUND(AVG(test_sharpe), 3) AS mean_test_sharpe\nFROM trials\nWHERE test_sharpe IS NOT NULL\nGROUP BY strftime('%Y-%m-%dT%H:%M:%SZ', created_utc)\nORDER BY \"time\""}
+      ]
+    },
+    {
+      "id": 21,
+      "type": "table",
+      "title": "Trials detail",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 15},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "evidence-ledger"},
+      "targets": [
+        {"refId": "A", "queryType": "table", "rawQuery": true,
+         "queryText": "SELECT created_utc AS time, mode, test_sharpe,\n       json_extract(metrics_json, '$.win_rate') AS win_rate,\n       json_extract(metrics_json, '$.trades') AS trades,\n       json_extract(metrics_json, '$.profit_total') AS profit_total\nFROM trials\nORDER BY created_utc"}
+      ]
+    },
+    {
+      "id": 40,
+      "type": "timeseries",
+      "title": "News depth — items per day",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 23},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "news-summary"},
+      "targets": [
+        {"refId": "A", "queryType": "time series", "rawQuery": true,
+         "queryText": "SELECT strftime('%Y-%m-%dT00:00:00Z', day) AS \"time\", SUM(items) AS items, SUM(fetches) AS fetches\nFROM news_summary\nGROUP BY strftime('%Y-%m-%d', day)\nORDER BY \"time\""}
+      ]
+    },
+    {
+      "id": 41,
+      "type": "table",
+      "title": "News depth — feeds detail",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 23},
+      "datasource": {"type": "frser-sqlite-datasource", "uid": "news-summary"},
+      "targets": [
+        {"refId": "A", "queryType": "table", "rawQuery": true,
+         "queryText": "SELECT day, feed, fetches, items FROM news_summary ORDER BY day DESC, feed"}
+      ]
+    }
+  ]
+}

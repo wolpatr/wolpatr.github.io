@@ -1,0 +1,15 @@
+# Dashboard-file provider. Polling >10s on purpose: dashboards live on a Docker
+# bind mount, where fs-watch events are documented-unreliable (research doc §1.4).
+apiVersion: 1
+
+providers:
+  - name: trading-evidence
+    orgId: 1
+    folder: trading-evidence
+    type: file
+    disableDeletion: true
+    updateIntervalSeconds: 300
+    allowUiUpdates: false
+    options:
+      path: /var/lib/grafana/dashboards
+      foldersFromFilesStructure: false

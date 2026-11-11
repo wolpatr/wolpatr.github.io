@@ -1,0 +1,52 @@
+# THE hand-maintained content file (see spec §3): curated lineup, declared
+# statuses + percentages, one-liners. All fields are hand-updated and truthed
+# whenever edited. Scraped proof signals live in content/visuals.json.
+site:
+  title: "Patrick Wolf — building in public"
+  tagline: "Trading-agent research, hardware pets, and applied ML — with honest, declared progress."
+  contact: "Contact: not set yet — this block stays a placeholder until a public channel is chosen."
+arms:
+  live_count: 2
+  statement: "Two dry-run (paper) trading arms live — v0.1 under weekly gate discipline, v0.2 as the comparison arm."
+evidence:
+  trials_recorded: 15
+  gate_week: 1
+projects:
+  - slug: data-agent
+    repo: wolpatr/data_agent
+    status: active
+    percent: 65
+    description: "Systematic crypto-trading research agent: an experiment ledger with sealed holdout discipline,
+      a fold-based model pipeline, and two 24/7 dry-run trading arms under gate discipline.
+      The public repo carries the framework, docs, and experiment provenance."
+  - slug: lovebird
+    repo: wolpatr/lovebird
+    status: active
+    percent: 40
+    description: "ESP32-S3 tamagotchi-style virtual pets — hardware, firmware, and an open build tracked in public issues."
+  - slug: servicenow-ticket-intel
+    repo: wolpatr/servicenow-ticket-intel
+    status: shipped
+    percent: 100
+    description: "AI-powered ServiceNow ticket intelligence assistant with quality gates, adversarial QA, and retrieval-augmented generation."
+  - slug: ai-perception-analysis
+    repo: wolpatr/ai-perception-analysis
+    status: shipped-resting
+    percent: 85
+    description: "Statistical analysis of public perception of AI, published for general use. Resting after the shipped release."
+  - slug: cnn-glyph-classification
+    repo: wolpatr/CNN-Glyph-Classification
+    status: resting
+    percent: 40
+    description: "Convolutional neural networks for glyph classification. Resting after the initial training rounds."
+tail:
+  - repo: wolpatr/minirocket
+    note: "Fork of MINIROCKET, an almost-deterministic time-series transform."
+  - repo: wolpatr/Deep_learning_models
+    note: "Earlier glyph-recognition models: simple, sequence-to-sequence, transformer."
+  - repo: wolpatr/MiniRocket_AC
+    note: "Open repository work from an AI-for-time-series module."
+  - repo: wolpatr/Ethics_Project_M
+    note: "Course ethics project."
+  - repo: wolpatr/fastapi-auth-starter
+    note: "Placeholder scaffold — effectively empty."

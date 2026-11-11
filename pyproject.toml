@@ -1,0 +1,25 @@
+[project]
+name = "web-portfolio"
+version = "0.1.0"
+description = "Public portfolio site (wolpatr.github.io) + local evidence dashboard, built from public GitHub data only."
+readme = "README.md"
+authors = [
+    { name = "wolpatr" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mkdocs-material>=9.8.1",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+web = "web_portfolio.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]

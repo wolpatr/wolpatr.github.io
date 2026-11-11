@@ -1,0 +1,581 @@
+{
+  "schema": "visuals.v1",
+  "generated_utc": "2026-11-11T13:08:54+00:00",
+  "source": "github-api-v3-unauthenticated",
+  "user": {
+    "login": "wolpatr",
+    "public_repos": 10,
+    "html_url": "https://github.com/wolpatr",
+    "stale": false
+  },
+  "repos": {
+    "wolpatr/CNN-Glyph-Classification": {
+      "pushed_at": "2026-09-24T21:00:36Z",
+      "created_at": "2026-09-24T20:55:18Z",
+      "language": null,
+      "platform_languages": {},
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 0
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 1
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 0,
+      "stale": false
+    },
+    "wolpatr/Deep_learning_models": {
+      "pushed_at": "2026-02-03T14:01:01Z",
+      "created_at": "2026-02-03T13:57:48Z",
+      "language": "Jupyter Notebook",
+      "platform_languages": {
+        "Jupyter Notebook": 488986
+      },
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 0
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 0
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 0,
+      "stale": false
+    },
+    "wolpatr/Ethics_Project_M": {
+      "pushed_at": "2026-03-30T19:44:23Z",
+      "created_at": "2026-03-30T19:39:20Z",
+      "language": "Jupyter Notebook",
+      "platform_languages": {
+        "Jupyter Notebook": 31615
+      },
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 0
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 0
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 0,
+      "stale": false
+    },
+    "wolpatr/MiniRocket_AC": {
+      "pushed_at": "2026-02-24T12:23:14Z",
+      "created_at": "2026-02-24T12:23:14Z",
+      "language": null,
+      "platform_languages": {},
+      "open_issues": 0,
+      "stargazers": 1,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 0
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 0
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 0,
+      "stale": false
+    },
+    "wolpatr/ai-perception-analysis": {
+      "pushed_at": "2026-08-17T22:51:27Z",
+      "created_at": "2026-08-17T22:43:49Z",
+      "language": "Jupyter Notebook",
+      "platform_languages": {
+        "Jupyter Notebook": 12150,
+        "Python": 9040
+      },
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 0
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 0
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 0,
+      "stale": false
+    },
+    "wolpatr/data_agent": {
+      "pushed_at": "2026-11-10T20:59:15Z",
+      "created_at": "2026-11-10T20:59:06Z",
+      "language": "Python",
+      "platform_languages": {
+        "Python": 48677,
+        "HTML": 13433,
+        "JavaScript": 8365,
+        "CSS": 5305
+      },
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787439600,
+          "total": 0
+        },
+        {
+          "week": 1788044400,
+          "total": 0
+        },
+        {
+          "week": 1788649200,
+          "total": 0
+        },
+        {
+          "week": 1789254000,
+          "total": 0
+        },
+        {
+          "week": 1789858800,
+          "total": 0
+        },
+        {
+          "week": 1790463600,
+          "total": 0
+        },
+        {
+          "week": 1791068400,
+          "total": 0
+        },
+        {
+          "week": 1791673200,
+          "total": 0
+        },
+        {
+          "week": 1792278000,
+          "total": 0
+        },
+        {
+          "week": 1792882800,
+          "total": 0
+        },
+        {
+          "week": 1793487600,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 21
+        }
+      ],
+      "commits_4w": 21,
+      "stale": false
+    },
+    "wolpatr/fastapi-auth-starter": {
+      "pushed_at": "2026-09-03T12:13:38Z",
+      "created_at": "2026-09-03T12:13:37Z",
+      "language": null,
+      "platform_languages": {},
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [],
+      "commits_4w": null,
+      "stale": false
+    },
+    "wolpatr/lovebird": {
+      "pushed_at": "2026-11-02T22:37:51Z",
+      "created_at": "2026-11-02T17:04:20Z",
+      "language": null,
+      "platform_languages": {},
+      "open_issues": 8,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 0
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 0
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 5
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 5,
+      "stale": false
+    },
+    "wolpatr/minirocket": {
+      "pushed_at": "2026-04-12T19:53:31Z",
+      "created_at": "2026-02-28T15:26:28Z",
+      "language": "Jupyter Notebook",
+      "platform_languages": {
+        "Jupyter Notebook": 785817,
+        "Python": 54260
+      },
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 0
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 0
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 0,
+      "stale": false
+    },
+    "wolpatr/servicenow-ticket-intel": {
+      "pushed_at": "2026-09-03T06:01:26Z",
+      "created_at": "2026-09-03T06:00:50Z",
+      "language": "Python",
+      "platform_languages": {
+        "Python": 94743
+      },
+      "open_issues": 0,
+      "stargazers": 0,
+      "commit_activity": [
+        {
+          "week": 1787443200,
+          "total": 0
+        },
+        {
+          "week": 1788048000,
+          "total": 1
+        },
+        {
+          "week": 1788652800,
+          "total": 0
+        },
+        {
+          "week": 1789257600,
+          "total": 0
+        },
+        {
+          "week": 1789862400,
+          "total": 0
+        },
+        {
+          "week": 1790467200,
+          "total": 0
+        },
+        {
+          "week": 1791072000,
+          "total": 0
+        },
+        {
+          "week": 1791676800,
+          "total": 0
+        },
+        {
+          "week": 1792281600,
+          "total": 0
+        },
+        {
+          "week": 1792886400,
+          "total": 0
+        },
+        {
+          "week": 1793491200,
+          "total": 0
+        },
+        {
+          "week": 1794096000,
+          "total": 0
+        }
+      ],
+      "commits_4w": 0,
+      "stale": false
+    }
+  }
+}

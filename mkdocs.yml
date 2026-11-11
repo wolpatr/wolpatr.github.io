@@ -1,0 +1,40 @@
+site_name: Patrick Wolf — building in public
+site_description: Declared progress + scraped proof signals over the public GitHub projects of wolpatr.
+site_url: https://wolpatr.github.io
+repo_url: https://github.com/wolpatr/wolpatr.github.io
+# Strict: a drift between mkdocs nav and content/progress.yaml must fail the
+# build, not silently produce pages whose nav does not resolve.
+strict: true
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/portfolio.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.tasklist
+
+nav:
+  - Home: index.md
+  - Now: now.md
+  - Projects:
+      - data_agent: projects/data-agent.md
+      - lovebird: projects/lovebird.md
+      - servicenow-ticket-intel: projects/servicenow-ticket-intel.md
+      - ai-perception-analysis: projects/ai-perception-analysis.md
+      - CNN-Glyph-Classification: projects/cnn-glyph-classification.md

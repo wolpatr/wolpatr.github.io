@@ -1,0 +1,30 @@
+# Grafana OSS 13.3.1 — local evidence dashboard (localhost, authenticated, read-only).
+# Human setup (spec §8): create dashboard/.env with GF_SECURITY_ADMIN_PASSWORD, then:
+#     docker compose up -d
+services:
+  grafana:
+    image: grafana/grafana-oss:13.3.1
+    container_name: evidence-grafana
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      # Compose refuses to start without the password — it is set once, via gitignored .env.
+      GF_SECURITY_ADMIN_PASSWORD: ${GF_SECURITY_ADMIN_PASSWORD:?set GF_SECURITY_ADMIN_PASSWORD in dashboard/.env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      # Catalog-signed SQLite datasource, pinned (research doc §1.2).
+      GF_PLUGINS_PREINSTALL: frser-sqlite-datasource@4.0.6
+    volumes:
+      - ./provisioning:/etc/grafana/provisioning:ro
+      - ./dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+      # Evidence stores stay the writer's property; this container reads only.
+      # WAL sidecars are covered by mounting the parent directories read-only.
+      - ../data_agent/docs/experiments:/data/experiments:ro
+      - ../data_agent/bot:/data/bot:ro
+      # Materializer output (written by dashboard/materializer.py on the host):
+      - ./state:/data/state:ro
+
+volumes:
+  grafana-data:

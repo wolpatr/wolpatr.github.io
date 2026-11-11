@@ -1,0 +1,191 @@
+/* Portfolio visuals (hand-written once): declared bars, status chips, proof
+ * tiles, sparkline and language bars for generated pages. */
+
+:root {
+  --pf-bar-track: rgba(0, 0, 0, .07);
+}
+
+[data-md-color-scheme="slate"] {
+  --pf-bar-track: rgba(255, 255, 255, .12);
+}
+
+/* Declared progress bar */
+.pf-bar {
+  position: relative;
+  height: 14px;
+  border-radius: 7px;
+  background: var(--pf-bar-track);
+  overflow: hidden;
+  max-width: 640px;
+}
+
+.pf-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #4051b5, #526cfe);
+}
+
+.pf-bar-caption {
+  margin-top: .2rem;
+  color: var(--md-default-fg-color--light);
+  max-width: 640px;
+}
+
+/* Status chips */
+.pf-chip {
+  display: inline-block;
+  padding: .1rem .55rem;
+  border-radius: 1rem;
+  font-size: .75rem;
+  font-weight: 600;
+  vertical-align: middle;
+  background: var(--md-typeset-color);
+  opacity: .85;
+}
+
+.pf-chip-active {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.pf-chip-shipped {
+  background: #4051b5;
+  color: #fff;
+}
+
+.pf-chip-shipped-resting {
+  background: #4051b5;
+  color: #fff;
+}
+
+.pf-chip-resting {
+  background: #6d6d6d;
+  color: #fff;
+}
+
+/* Evidence tiles */
+.pf-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: .8rem 0 1.2rem;
+}
+
+.pf-tile {
+  flex: 1 1 140px;
+  min-width: 140px;
+  max-width: 260px;
+  padding: .8rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest, rgba(0,0,0,.1));
+  border-radius: 10px;
+  background: var(--md-default-bg-color);
+}
+
+.pf-tile-value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.pf-tile-label {
+  color: var(--md-default-fg-color--light);
+  font-size: .78rem;
+}
+
+/* Project cards */
+.pf-cards,
+.md-typeset .pf-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: .8rem 0 1.2rem;
+}
+
+.pf-card {
+  flex: 1 1 280px;
+  min-width: 260px;
+  max-width: 420px;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--md-default-fg-color--lightest, rgba(0,0,0,.1));
+  border-radius: 10px;
+  background: var(--md-default-bg-color);
+}
+
+.pf-card h3 {
+  margin: 0 0 .35rem;
+}
+
+.pf-card-meta {
+  color: var(--md-default-fg-color--light);
+  font-size: .78rem;
+}
+
+.pf-muted {
+  color: var(--md-default-fg-color--light);
+}
+
+/* Proof signals */
+.pf-proof {
+  max-width: 640px;
+}
+
+.pf-spark {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  display: block;
+  margin: .6rem 0;
+  color: var(--md-typeset-a-color, #526cfe);
+}
+
+.pf-proof-list {
+  font-size: .9rem;
+}
+
+/* Language bars */
+.pf-langs {
+  max-width: 560px;
+}
+
+.pf-lang {
+  display: grid;
+  grid-template-columns: 10rem 1fr 5.5rem;
+  gap: .6rem;
+  align-items: center;
+  margin-bottom: .45rem;
+  font-size: .85rem;
+}
+
+.pf-lang-name {
+  text-align: right;
+  color: var(--md-default-fg-color--light);
+}
+
+.pf-lang-track {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--pf-bar-track);
+}
+
+.pf-lang-fill {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background: var(--md-typeset-a-color, #526cfe);
+}
+
+.pf-lang-note {
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+
+/* Honest tail */
+.pf-tail {
+  line-height: 1.6;
+}
+
+.pf-tail a {
+  font-weight: 600;
+}

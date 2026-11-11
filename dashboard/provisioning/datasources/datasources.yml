@@ -1,0 +1,40 @@
+# Grafana datasource provisioning (spec §5): one read-only sqlite datasource per
+# store. Paths are container paths — see docker-compose.yml for the :ro mounts.
+apiVersion: 1
+
+datasources:
+  - name: Trials ledger
+    type: frser-sqlite-datasource
+    uid: evidence-ledger
+    access: proxy
+    editable: false
+    isDefault: false
+    jsonData:
+      path: /data/experiments/ledger.sqlite
+
+  - name: Arm v0.1 (gate)
+    type: frser-sqlite-datasource
+    uid: arm-v01
+    access: proxy
+    editable: false
+    isDefault: false
+    jsonData:
+      path: /data/bot/tradesv3.dryrun.sqlite
+
+  - name: Arm v0.2 (comparison)
+    type: frser-sqlite-datasource
+    uid: arm-v02
+    access: proxy
+    editable: false
+    isDefault: false
+    jsonData:
+      path: /data/bot/tradesv3.dryrun.v02.sqlite
+
+  - name: News summary (materialized)
+    type: frser-sqlite-datasource
+    uid: news-summary
+    access: proxy
+    editable: false
+    isDefault: false
+    jsonData:
+      path: /data/state/news_summary.sqlite
