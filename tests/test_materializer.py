@@ -3,8 +3,6 @@ import json
 import sys
 from pathlib import Path
 
-import pytest
-
 REPO = Path(__file__).resolve().parents[1]
 MATERIALIZER = REPO / "dashboard" / "materializer.py"
 

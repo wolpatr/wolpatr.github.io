@@ -1,6 +1,11 @@
 import pytest
 
-from web_portfolio.progress import ProgressError, load_progress, parse_now_entries, parse_progress_text
+from web_portfolio.progress import (
+    ProgressError,
+    load_progress,
+    parse_now_entries,
+    parse_progress_text,
+)
 
 VALID = """
 site:

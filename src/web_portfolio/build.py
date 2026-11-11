@@ -6,7 +6,6 @@ The sanitizer runs after generation so nothing unscanned reaches the site.
 from __future__ import annotations
 
 import dataclasses
-import datetime as dt
 import json
 import shutil
 import subprocess
@@ -14,9 +13,15 @@ import sys
 from pathlib import Path
 
 from web_portfolio.progress import load_now_entries, load_progress
-from web_portfolio.sanitize import format_findings, sanitize_paths
-from web_portfolio.scrape import VISUALS_SCHEMA, GitHubClient, RateLimited, ScrapeError, build_visuals
 from web_portfolio.render import write_generated_docs
+from web_portfolio.sanitize import format_findings, sanitize_paths
+from web_portfolio.scrape import (
+    VISUALS_SCHEMA,
+    GitHubClient,
+    RateLimited,
+    ScrapeError,
+    build_visuals,
+)
 
 
 class SanitizeError(RuntimeError):

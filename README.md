@@ -16,7 +16,7 @@ no credentials, no private data (the sanitizer gate refuses to build on it).
 | `docs/now.md` | Hand-written dated "Now" entries, latest first (`## YYYY-MM-DD`). |
 | `docs/index.md`, `docs/projects/*.md` | Generated at build time (gitignored) from the above. |
 | `docs/stylesheets/portfolio.css` | Hand-written once: bars, chips, tiles. |
-| `dashboard/` | Local Grafana OSS 13.3.1 compose + provisioned dashboards + news materializer. |
+| `dashboard/` | Local Grafana OSS 13.0.2 compose + provisioned dashboards + news materializer. |
 | `.github/workflows/deploy.yml` | Cron (daily 04:00 UTC) + push: scrape → generate → sanitize → mkdocs → Pages (SHA-pinned actions, no secrets). |
 
 ## Site tooling (uv)

@@ -72,7 +72,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         return args.func(args)
-    except Exception as exc:  # surfaced, not swallowed
+    except (OSError, ValueError, RuntimeError) as exc:  # surfaced, not swallowed
         print(f"[web {args.command}] {type(exc).__name__}: {exc}", file=sys.stderr)
         return 2
 

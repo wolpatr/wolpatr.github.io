@@ -207,7 +207,7 @@ class TestCompose:
 
     def test_pinned_grafana_with_preinstalled_sqlite_plugin(self, compose):
         service = compose["services"]["grafana"]
-        assert service["image"] == "grafana/grafana-oss:13.3.1"
+        assert service["image"] == "grafana/grafana-oss:13.0.2"
         preinstall = service["environment"]["GF_PLUGINS_PREINSTALL"]
         assert "frser-sqlite-datasource@4.0.6" in preinstall
         assert service["restart"] == "unless-stopped"

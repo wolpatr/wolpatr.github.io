@@ -2,7 +2,7 @@
 # statuses + percentages, one-liners. All fields are hand-updated and truthed
 # whenever edited. Scraped proof signals live in content/visuals.json.
 site:
-  title: "Patrick Wolf — building in public"
+  title: "Patrick Wolf"
   tagline: "Trading-agent research, hardware pets, and applied ML, with progress declared for each."
   contact: "Contact: not set yet. This block stays a placeholder until a public channel is chosen."
 arms:

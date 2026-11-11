@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import dataclasses
 import datetime as dt
+import itertools
 import re
 from pathlib import Path
 from typing import Any
@@ -312,7 +313,7 @@ def parse_now_entries(text: str) -> list[NowEntry]:
     flush()
     if not entries:
         raise ProgressError("now.md: no dated '## YYYY-MM-DD' entries found")
-    for previous, today in zip(entries, entries[1:]):
+    for previous, today in itertools.pairwise(entries):
         if today.date >= previous.date:
             raise ProgressError(
                 f"now.md: entries must be listed latest first "

@@ -119,19 +119,19 @@ def render_index(progress: Progress, visuals: Mapping, now_entries: list[NowEntr
         "",
         esc(now_entries[0].summary),
         "",
-        f"[Read the full Now log →](now.md)",
+        "[Read the full Now log →](now.md)",
         "",
         "## Live evidence",
         "",
         '<div class="pf-tiles">'
         + f'<div class="pf-tile"><div class="pf-tile-value">{progress.arms.live_count}</div>'
-        + f'<div class="pf-tile-label">dry-run arms live</div></div>'
+        + '<div class="pf-tile-label">dry-run arms live</div></div>'
         + f'<div class="pf-tile"><div class="pf-tile-value">{progress.evidence.trials_recorded}</div>'
-        + f'<div class="pf-tile-label">trials recorded</div></div>'
+        + '<div class="pf-tile-label">trials recorded</div></div>'
         + f'<div class="pf-tile"><div class="pf-tile-value">{progress.evidence.gate_week}</div>'
-        + f'<div class="pf-tile-label">gate week (v0.1)</div></div>'
+        + '<div class="pf-tile-label">gate week (v0.1)</div></div>'
         + f'<div class="pf-tile"><div class="pf-tile-value">{esc(visuals.get("user", {}).get("public_repos", ""))}</div>'
-        + f'<div class="pf-tile-label">public repos</div></div>'
+        + '<div class="pf-tile-label">public repos</div></div>'
         + "</div>",
         "",
         f"*{esc(progress.arms.statement)}*",
@@ -144,7 +144,7 @@ def render_index(progress: Progress, visuals: Mapping, now_entries: list[NowEntr
         "",
         "## The honest tail",
         "",
-        f'<ul class="pf-tail">'
+        '<ul class="pf-tail">'
         + "".join(
             f'<li><a href="https://github.com/{esc(t.repo)}">{esc(t.repo_name)}</a> · {esc(t.note)}</li>'
             for t in progress.tail
@@ -186,8 +186,8 @@ def render_project_page(progress: Progress, project: Project, visuals: Mapping) 
         + svg_sparkline(entry.get("commit_activity"))
         + f'<p class="pf-proof-caption">{esc(project.repo_name)}: commits per week (recent weeks'
         + (", data possibly stale" if stale else "")
-        + f")</p>"
-        + f"<ul class=\"pf-proof-list\">"
+        + ")</p>"
+        + "<ul class=\"pf-proof-list\">"
         + (
             f"<li>Last push: <strong>{esc(str(pushed)[:10])}</strong></li>"
             f"<li>Commits in the last four weeks: <strong>{'no data yet' if commits is None else commits}</strong></li>"
