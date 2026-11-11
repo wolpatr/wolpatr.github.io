@@ -3,11 +3,11 @@
 # whenever edited. Scraped proof signals live in content/visuals.json.
 site:
   title: "Patrick Wolf — building in public"
-  tagline: "Trading-agent research, hardware pets, and applied ML — with honest, declared progress."
-  contact: "Contact: not set yet — this block stays a placeholder until a public channel is chosen."
+  tagline: "Trading-agent research, hardware pets, and applied ML, with progress declared for each."
+  contact: "Contact: not set yet. This block stays a placeholder until a public channel is chosen."
 arms:
   live_count: 2
-  statement: "Two dry-run (paper) trading arms live — v0.1 under weekly gate discipline, v0.2 as the comparison arm."
+  statement: "Two dry-run (paper) trading arms live: v0.1 under weekly gate discipline, v0.2 as the comparison arm."
 evidence:
   trials_recorded: 15
   gate_week: 1
@@ -23,7 +23,7 @@ projects:
     repo: wolpatr/lovebird
     status: active
     percent: 40
-    description: "ESP32-S3 tamagotchi-style virtual pets — hardware, firmware, and an open build tracked in public issues."
+    description: "ESP32-S3 tamagotchi-style virtual pets: hardware, firmware, and an open build tracked in public issues."
   - slug: servicenow-ticket-intel
     repo: wolpatr/servicenow-ticket-intel
     status: shipped
@@ -49,4 +49,4 @@ tail:
   - repo: wolpatr/Ethics_Project_M
     note: "Course ethics project."
   - repo: wolpatr/fastapi-auth-starter
-    note: "Placeholder scaffold — effectively empty."
+    note: "Placeholder scaffold, effectively empty."

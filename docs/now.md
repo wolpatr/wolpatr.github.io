@@ -1,6 +1,6 @@
 ## 2026-11-11
 
-Both dry-run trading arms went live on paper trading yesterday — v0.1 under
+Both dry-run trading arms went live on paper trading yesterday: v0.1 under
 weekly gate discipline, v0.2 as the comparison arm. The RSS news adapter
 shipped into the v0.2 arm, and its feature now lands in model training runs
 automatically. This portfolio site got its scaffold: the first weekly review is

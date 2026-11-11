@@ -75,7 +75,7 @@ def percent_bar(project: Project) -> str:
         f'<div class="pf-bar" role="progressbar" aria-label="Declared progress" '
         f'aria-valuemin="0" aria-valuemax="100" aria-valuenow="{project.percent}">'
         f'<div class="pf-bar-fill" style="width: {project.percent}%;"></div></div>\n'
-        f'<p class="pf-bar-caption"><strong>{project.percent}%</strong> — declared progress, hand-maintained</p>\n'
+        f'<p class="pf-bar-caption"><strong>{project.percent}%</strong> declared progress, hand-maintained</p>\n'
     )
 
 
@@ -146,14 +146,14 @@ def render_index(progress: Progress, visuals: Mapping, now_entries: list[NowEntr
         "",
         f'<ul class="pf-tail">'
         + "".join(
-            f'<li><a href="https://github.com/{esc(t.repo)}">{esc(t.repo_name)}</a> — {esc(t.note)}</li>'
+            f'<li><a href="https://github.com/{esc(t.repo)}">{esc(t.repo_name)}</a> · {esc(t.note)}</li>'
             for t in progress.tail
         )
         + "</ul>",
         "",
         "## Milestones",
         "",
-        *[f"- **{entry.date.isoformat()}** — {esc(_milestone_text(entry))}" for entry in now_entries],
+        *[f"- {entry.date.isoformat()}: {esc(_milestone_text(entry))}" for entry in now_entries],
         "",
         "---",
         "",
@@ -184,7 +184,7 @@ def render_project_page(progress: Progress, project: Project, visuals: Mapping) 
         "",
         '<div class="pf-proof">'
         + svg_sparkline(entry.get("commit_activity"))
-        + f'<p class="pf-proof-caption">{esc(project.repo_name)} — commits per week (recent weeks'
+        + f'<p class="pf-proof-caption">{esc(project.repo_name)}: commits per week (recent weeks'
         + (", data possibly stale" if stale else "")
         + f")</p>"
         + f"<ul class=\"pf-proof-list\">"
